@@ -1,5 +1,5 @@
 function specGen() {
-  var specArray = ["Human","Vulcan", "Klingon","Betazoid", "Trill", "Joined Trill", "Bajoran", "Cardassian"]
+  var specArray = ["Human","Vulcan", "Klingon","Betazoid", "Trill", "Joined Trill", "Bajoran", "Cardassian", "Freed Borg drone"]
   var specNum = Math.floor(Math.random() * specArray.length);
   var species = specArray[specNum];
   return species;
@@ -13,7 +13,7 @@ function genderGen() {
 }
 
 function ageGen() {
-  if (species === "Human" || species === "Betazoid" || species === "Trill" || species === "Bajoran" || species === "Cardassian") {
+  if (species === "Human" || species === "Betazoid" || species === "Trill" || species === "Bajoran" || species === "Cardassian" || species === "Freed Borg drone") {
     var ageNum = Math.floor(Math.random() * 30);
     var age = ageNum + 20;
     return age;
@@ -316,6 +316,13 @@ function nameGen(){
   } else {
     var name = syl1Array[syl1Num] + syl2Array[syl3Num] + " " + syl1Array[syl2Num] + syl2Array[syl4Num];
   }
+  return name;
+} else if (species === "Freed Borg drone") {
+  var syl1Array = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven",]
+  var syl2Array = ["Twelve", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven",]
+  var syl2Num = Math.floor(Math.random() * syl1Array.length);
+  var syl1Num = Math.floor(Math.random() * syl2Num);
+  var name = syl1Array[syl1Num] + " of " + syl2Array[syl2Num];
   return name;
 }
 }
