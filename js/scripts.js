@@ -13,7 +13,7 @@ function genderGen() {
 }
 
 function ageGen() {
-  if (species === "Human" || species === "Betazoid" || species === "Trill" || species === "Bajoran") {
+  if (species === "Human" || species === "Betazoid" || species === "Trill" || species === "Bajoran" || species === "Cardassian") {
     var ageNum = Math.floor(Math.random() * 30);
     var age = ageNum + 20;
     return age;
@@ -343,6 +343,7 @@ $(document).ready(function() {
     $("#skin").text(skin);
     $("#hair").text(hair);
     $("#eye").text(eye);
+    $(".charbox").show();
   });
 
 });
